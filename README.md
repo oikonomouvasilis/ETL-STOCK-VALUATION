@@ -1,6 +1,6 @@
 # ETL Stock Valuation Project
 
-This project provides tools for stock valuation using financial data from Finnhub API. It includes ETL (Extract, Transform, Load) processes to fetch stock data, calculate CAPM (Capital Asset Pricing Model) values, and store results in a SQLite database.
+This project provides tools for stock valuation using financial data from Finnhub API. It includes ETL (Extract, Transform, Load) processes to fetch stock data, calculate CAPM (Capital Asset Pricing Model) values, store results in a SQLite database, produces useful statistical visualizations using Power BI.
 
 ## Project Structure
 
@@ -65,6 +65,16 @@ Check the database contents:
 python DATABASE/check_db.py
 python DATABASE/check_table.py
 ```
+
+## Power BI Connection
+
+To visualize the stock valuation data in Power BI:
+
+1. Open Power BI Desktop.
+2. Go to Get Data > More > Database > SQLite.
+3. Select the database file (e.g., `financials.db` created by `create_db.py`).
+4. Choose the `financials` table and load the data.
+5. Create visualizations using the CAPM and other financial metrics.
 
 ## Additional Scripts
 
