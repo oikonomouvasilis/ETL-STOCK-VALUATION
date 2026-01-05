@@ -1,0 +1,12 @@
+This project implements an end-to-end equity analysis workflow that combines financial theory with data analytics to 
+assess risk and expected returns across publicly traded US stocks. Market and company-level data are retrieved programmatically (through the usage of Finnhub API),
+transformed into economically meaningful metrics, and stored in a structured database for scalable analysis.
+
+Using the Capital Asset Pricing Model (CAPM), expected returns are calculated for individual equities based on their exposure 
+to systematic market risk (beta). Market returns are derived from historical S&P 500 data using monthly geometric returns to ensure
+statistically robust assumptions. The processed results are stored in a relational SQL database, enabling clean data management and seamless integration with business intelligence tools.
+
+The final analysis is conducted in Power BI, where interactive visualizations are used to explore the relationship between risk 
+and return. Scatter plots highlight the positioning of stocks relative to market risk, quadrant analysis supports comparative evaluation,
+and distribution charts reveal broader market patterns in beta and CAPM-implied returns. Together, these views provide both stock-level and market-level insights, 
+supporting data-driven investment reasoning and portfolio analysis.
