@@ -91,3 +91,50 @@ To visualize the stock valuation data in Power BI:
 
 This project is for educational purposes. Ensure compliance with Finnhub's terms of service.
 
+                     ┌─────────────────────────────────┐
+                     │         EXTERNAL DATA SOURCES   │
+                     │─────────────────────────────────│
+                     │ Finnhub API                     │
+                     │ S&P 500 history CSV             │
+                     └─────────────────────────────────┘
+                                    │
+                                    ▼
+                     ┌─────────────────────────────────┐
+                     │        DATA INGESTION LAYER     │
+                     │─────────────────────────────────│
+                     │ Python API calls                 │
+                     │ fetch_symbols.py                 │
+                     │ fetch_prices.py                  │
+                     │ fetch_financials.py              │
+                     └─────────────────────────────────┘
+                                    │
+                                    ▼
+                     ┌─────────────────────────────────┐
+                     │      TRANSFORMATION LAYER        │
+                     │─────────────────────────────────│
+                     │ compute market return            │
+                     │ compute CAPM                     │
+                     │ compute DCF projections          │
+                     │ data normalization                │
+                     └─────────────────────────────────┘
+                                    │
+                                    ▼
+                     ┌─────────────────────────────────┐
+                     │         DATA STORAGE LAYER       │
+                     │─────────────────────────────────│
+                     │ SQLite Database (valuation.db)   │
+                     │   ● financials                   │
+                     │   ● prices (optional)            │
+                     │   ● dcf_results (optional)       │
+                     └─────────────────────────────────┘
+                                    │
+                                    ▼
+                     ┌─────────────────────────────────┐
+                     │   ANALYTICS & VISUALIZATION      │
+                     │─────────────────────────────────│
+                     │ Power BI                         │
+                     │ ● Scatter: Beta vs CAPM          │
+                     │ ● Quadrants                      │
+                     │ ● Histograms (Distribution)      │
+                     │ ● Dashboards & Filters           │
+                     └─────────────────────────────────┘
