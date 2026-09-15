@@ -1,0 +1,9 @@
+# μυστικά — ποτέ σε commit
+.env
+*.key
+
+# python
+__pycache__/
+*.pyc
+venv/
+.venv/
